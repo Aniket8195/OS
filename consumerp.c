@@ -54,15 +54,16 @@ int main(){
 			k++;
 		}
 
-		if (s[i] != ' ' && s[i] != '\0') {
-			wordcnt++;
-		}
+		if ((i == 0 || s[i - 1] == ' ' || s[i - 1] == '.') && (s[i] != ' ' && s[i] != '\0')) {
+                  wordcnt++;
+                }
 
+		 if (s[i] != ' ' && s[i] != '\0') {
+               charcnt++;
+               }
 		if (s[i] == '.' && (s[i + 1] == ' ' || s[i + 1] == '\0')) {
-			linecnt++;
-		} else if (s[i] != '.' && s[i] != ' ') {
-			charcnt++;
-		}
+                 linecnt++;
+              }
 	}
 
 	// Add a null terminator to the end of the vowel array
